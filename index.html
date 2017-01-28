@@ -46,14 +46,31 @@
 	<script src="js/jquery.js"></script>
 	<script>
 	$(document).ready(function() {
-		$("#background").load(function() {
+		/* Not the best possible solution */
+		function is_cached(src) {
+    	var image = new Image();
+    	image.src = src;
+
+    	return image.complete;
+		}
+
+		var loadPage = function() {
 			setTimeout(function() {
 				$('.loader').fadeOut(1000);
 				setTimeout(function() {
 					$('.footer').fadeTo(1000, 1);
 				}, 1000);
 			}, 500);
-		});
+		};
+	
+		if(!is_cached('img/background.jpg')) {
+			$('#background').load(function() {
+				loadPage();
+			});
+		}
+		else {
+			loadPage();
+		}
 	});
 	</script>
 </body>

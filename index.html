@@ -22,6 +22,8 @@
 </head>
 
 <body>
+	<img src="img/background.jpg" alt="" id="background" style="display: none" />
+	<div class="loader"></div> 
 
 	<!-- Header -->
 	<header class="header">
@@ -44,9 +46,14 @@
 	<script src="js/jquery.js"></script>
 	<script>
 	$(document).ready(function() {
-		setTimeout(function() {
-			$('.footer').fadeTo(1000, 1);
-		}, 1000);
+		$("#background").load(function() {
+			setTimeout(function() {
+				$('.loader').fadeOut(1000);
+				setTimeout(function() {
+					$('.footer').fadeTo(1000, 1);
+				}, 1000);
+			}, 500);
+		});
 	});
 	</script>
 </body>

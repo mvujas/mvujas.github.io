@@ -1,2 +1,2 @@
 # mvujas.github.io
-Personal website inspired by [KISS](img/KISS.jpg) principle.
+Personal webpage inspired by [KISS](img/KISS.jpg) principle.

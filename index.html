@@ -24,7 +24,7 @@
 <body>
 	<img src="img/background.jpg" alt="" id="background" style="display: none" />
 	<div class="loader"></div> 
-
+	
 	<!-- Header -->
 	<header class="header">
 		<div class="text-vertical-center">
@@ -34,45 +34,30 @@
 
 		<div class="footer">
 			<div class="contact">
-				<h4>Check out my latest work!</h4>
+				<!-- <h4>Check out my latest work!</h4> -->
 				<br>
 				<div class="links">
 					<a href="https://github.com/mvujas" target="_blank"><div class="github"></div></a>
+					<div class="questionmark" id="showQuestions"></div>
 				</div>
 			</div>
 		</div>
 	</header>
+	
+	<!-- Questions -->
+	<div class="fullscreen">
+		<div class="screencover">
+			<div class="questions">
+				<div class="qtext">
+					<div class="closebutton" id="exitQuestions"></div>
+					<div class="questioncontent" id="questioncontent"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/jquery.js"></script>
-	<script>
-	$(document).ready(function() {
-		/* Not the best possible solution */
-		function is_cached(src) {
-    	var image = new Image();
-    	image.src = src;
-
-    	return image.complete;
-		}
-
-		var loadPage = function() {
-			setTimeout(function() {
-				$('.loader').fadeOut(1000);
-				setTimeout(function() {
-					$('.footer').fadeTo(1000, 1);
-				}, 1000);
-			}, 500);
-		};
-	
-		if(!is_cached('img/background.jpg')) {
-			$('#background').load(function() {
-				loadPage();
-			});
-		}
-		else {
-			loadPage();
-		}
-	});
-	</script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

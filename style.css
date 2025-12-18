@@ -297,12 +297,11 @@ body {
 .publication-card::before {
     content: '';
     position: absolute;
-    left: 100px;
+    left: calc(100px + 1.5rem);
     top: 0;
     bottom: 0;
     width: 2px;
     background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-border) 100%);
-    transform: translateX(calc(-1.5rem - 1px));
 }
 
 .publication-card:first-of-type::before {
@@ -330,7 +329,7 @@ body {
 .publication-year::after {
     content: '';
     position: absolute;
-    right: -1.5rem;
+    left: calc(100% + 1.5rem);
     top: 0.5rem;
     width: 12px;
     height: 12px;
@@ -338,7 +337,7 @@ body {
     border: 3px solid var(--color-bg);
     border-radius: 50%;
     box-shadow: 0 0 0 2px var(--color-accent);
-    transform: translateX(50%);
+    transform: translate(-50%, 0);
 }
 
 .publication-content {
@@ -406,6 +405,36 @@ body {
 
 .pub-link svg {
     flex-shrink: 0;
+}
+
+/* Service Section */
+.service-section {
+    min-height: auto;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #0a0a0a 0%, var(--color-bg) 100%);
+}
+
+.service-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.service-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-content p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin: 0.75rem 0;
+    line-height: 1.6;
+}
+
+.service-content strong {
+    color: var(--color-text);
+    font-weight: 600;
 }
 
 /* Footer */
@@ -486,8 +515,7 @@ body {
     }
 
     .publication-card::before {
-        left: 60px;
-        transform: translateX(calc(-0.75rem - 1px));
+        left: calc(60px + 0.75rem);
     }
 
     .publication-year {
@@ -497,9 +525,7 @@ body {
     }
 
     .publication-year::after {
-        right: auto;
-        left: 100%;
-        margin-left: 0.75rem;
+        left: calc(100% + 0.75rem);
         transform: translateX(-50%);
         width: 10px;
         height: 10px;

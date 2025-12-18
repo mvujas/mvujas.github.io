@@ -283,6 +283,11 @@ body {
     background: linear-gradient(180deg, var(--color-bg) 0%, #0a0a0a 100%);
 }
 
+/* Preprints Section */
+.preprints-section {
+    background: #0a0a0a;
+}
+
 .publication-card {
     position: relative;
     display: grid;

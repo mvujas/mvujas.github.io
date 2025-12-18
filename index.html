@@ -1,34 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Person">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Milos Vujasinovic - Research and Publications">
+
+    <!-- Primary Meta Tags -->
+    <title>Milos Vujasinovic - Ph.D. Candidate @ EPFL | Decentralized ML & Privacy Researcher</title>
+    <meta name="title" content="Milos Vujasinovic - Ph.D. Candidate @ EPFL | Decentralized ML & Privacy Researcher">
+    <meta name="description" content="Milos Vujasinovic is a Ph.D. candidate at EPFL researching decentralized machine learning, privacy-preserving systems, and security in distributed systems. Published at ICML, EuroMLSys, ICDCS.">
     <meta name="author" content="Milos Vujasinovic">
-    <title>Milos Vujasinovic</title>
+    <meta name="keywords" content="Milos Vujasinovic, decentralized machine learning, federated learning, privacy-preserving ML, secure aggregation, EPFL, distributed systems, ML security, privacy, cryptography, decentralized systems">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mvujas.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://mvujas.com/">
+    <meta property="og:title" content="Milos Vujasinovic - Ph.D. Candidate @ EPFL | Decentralized ML & Privacy">
+    <meta property="og:description" content="Ph.D. candidate researching decentralized machine learning, privacy-preserving systems, and security in distributed systems at EPFL.">
+    <meta property="og:site_name" content="Milos Vujasinovic">
+    <meta property="profile:first_name" content="Milos">
+    <meta property="profile:last_name" content="Vujasinovic">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://mvujas.com/">
+    <meta name="twitter:title" content="Milos Vujasinovic - Ph.D. Candidate @ EPFL">
+    <meta name="twitter:description" content="Researching decentralized machine learning, privacy-preserving systems, and security in distributed systems.">
+
+    <!-- Schema.org Person markup -->
+    <meta itemprop="name" content="Milos Vujasinovic">
+    <meta itemprop="description" content="Ph.D. candidate at EPFL researching decentralized machine learning and privacy-preserving systems">
+    <meta itemprop="url" content="https://mvujas.com/">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Milos Vujasinovic",
+      "givenName": "Milos",
+      "familyName": "Vujasinovic",
+      "url": "https://mvujas.com/",
+      "sameAs": [
+        "https://github.com/mvujas",
+        "https://www.linkedin.com/in/milosvujasinovic/",
+        "https://scholar.google.com/citations?user=3h_NxuoAAAAJ",
+        "https://orcid.org/0009-0006-5083-3045"
+      ],
+      "jobTitle": "Ph.D. Candidate",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "École Polytechnique Fédérale de Lausanne (EPFL)",
+        "url": "https://www.epfl.ch/"
+      },
+      "knowsAbout": [
+        "Decentralized Machine Learning",
+        "Privacy-Preserving Machine Learning",
+        "Federated Learning",
+        "Secure Aggregation",
+        "Distributed Systems",
+        "Machine Learning Security",
+        "Cryptography"
+      ],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "École Polytechnique Fédérale de Lausanne (EPFL)"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-        <div class="hero-background">
+    <section class="hero-section" id="hero" role="banner">
+        <div class="hero-background" aria-hidden="true">
             <div class="gradient-overlay"></div>
-            <canvas id="particleCanvas"></canvas>
+            <canvas id="particleCanvas" aria-label="Animated network visualization representing decentralized systems"></canvas>
         </div>
         <div class="hero-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title" itemprop="name">
                 <span class="hero-name">Milos Vujasinovic</span>
             </h1>
-            <p class="hero-subtitle">Ph.D. Candidate @ EPFL | Decentralized ML & Privacy</p>
+            <p class="hero-subtitle" itemprop="jobTitle">Ph.D. Candidate @ EPFL | Decentralized ML & Privacy</p>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
+        <div class="scroll-indicator" aria-label="Scroll down to view content">
+            <div class="mouse" aria-hidden="true">
                 <div class="wheel"></div>
             </div>
             <p>Scroll to explore</p>
@@ -36,10 +100,10 @@
     </section>
 
     <!-- Social Links Section -->
-    <section class="section social-section" id="connect">
+    <section class="section social-section" id="connect" role="navigation" aria-label="Social media and professional profiles">
         <div class="section-content">
             <h2 class="section-heading" data-scroll>Connect</h2>
-            <div class="social-grid" data-scroll>
+            <div class="social-grid" data-scroll itemprop="sameAs">
                 <a href="https://github.com/mvujas" target="_blank" rel="noopener noreferrer" class="social-card">
                     <div class="social-icon">
                         <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">

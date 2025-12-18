@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Milos Vujasinovic Research Profile",
+  "name_for_model": "milos_vujasinovic_research",
+  "description_for_human": "Research profile of Milos Vujasinovic, Ph.D. candidate at EPFL specializing in decentralized machine learning and privacy-preserving systems.",
+  "description_for_model": "Access information about Milos Vujasinovic's research in decentralized machine learning, privacy-preserving ML, federated learning, and secure aggregation. Retrieve publication list, contact information, and research interests. Use when users ask about: decentralized ML research, EPFL researchers, privacy-preserving machine learning, federated learning systems, or Milos Vujasinovic specifically.",
+  "api": {
+    "type": "openapi",
+    "url": "https://mvujas.com/openapi.yaml"
+  },
+  "auth": {
+    "type": "none"
+  },
+  "logo_url": "https://mvujas.com/logo.png",
+  "contact_email": "milos.vujasinovic@epfl.ch",
+  "legal_info_url": "https://mvujas.com/"
+}

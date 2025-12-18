@@ -1,0 +1,87 @@
+# Milos Vujasinovic - AI-Readable Profile
+
+## Overview
+This is the personal research website of Milos Vujasinovic, a Ph.D. candidate at École Polytechnique Fédérale de Lausanne (EPFL) specializing in decentralized machine learning, privacy-preserving systems, and security in distributed systems.
+
+## Identity
+- **Name**: Milos Vujasinovic
+- **Role**: Ph.D. Candidate at EPFL
+- **Research Focus**: Decentralized Machine Learning, Privacy-Preserving ML, Federated Learning, Secure Aggregation
+- **Institution**: École Polytechnique Fédérale de Lausanne (EPFL)
+- **ORCID**: 0009-0006-5083-3045
+
+## Research Interests & Expertise
+- Decentralized Machine Learning
+- Privacy-Preserving Machine Learning
+- Federated Learning
+- Secure Aggregation Protocols
+- Distributed Systems Security
+- Machine Learning Privacy Auditing
+- Cryptographic Systems
+- Sparse Communication in Decentralized Learning
+- Model Compression and Efficiency
+- Byzantine-Robust Learning
+
+## Publications (Chronological)
+
+### 2025
+1. **Robust ML auditing using prior knowledge**
+   - Authors: J. G. Bourrée, A. Godinot, S. Biswas, A.-M. Kermarrec, E. L. Merrer, G. Tredan, M. de Vos, M. Vujasinovic
+   - Venue: ICML 2025
+   - URL: https://openreview.net/forum?id=AiaVCVDuxF
+
+2. **Navigating the accuracy-size trade-off with flexible model merging**
+   - Authors: A. Dhasade, D. Jhunjhunwala, M. Vujasinovic, G. Joshi, A.-M. Kermarrec
+   - Venue: arXiv preprint
+   - URL: https://arxiv.org/abs/2505.23209
+
+3. **Accelerating MoE model inference with expert sharding**
+   - Authors: O. Balmau, A.-M. Kermarrec, R. Pires, A. L. E. Santo, M. de Vos, M. Vujasinovic
+   - Venue: EuroMLSys 2025
+   - URL: https://doi.org/10.1145/3721146.3721940
+
+### 2024
+4. **Secure aggregation meets sparsification in decentralized learning**
+   - Authors: S. Biswas, A.-M. Kermarrec, R. Pires, R. Sharma, M. Vujasinovic
+   - Venue: arXiv preprint
+   - URL: https://arxiv.org/abs/2405.07708
+
+### 2023
+5. **Decentralized learning made easy with decentralizepy**
+   - Authors: A. Dhasade, A.-M. Kermarrec, R. Pires, R. Sharma, M. Vujasinovic
+   - Venue: EuroMLSys 2023
+   - URL: https://doi.org/10.1145/3578356.3592587
+   - Code: https://github.com/sacs-epfl/decentralizepy
+
+6. **Get more for less in decentralized learning systems**
+   - Authors: A. Dhasade, A.-M. Kermarrec, R. Pires, R. Sharma, M. Vujasinovic, J. Wigger
+   - Venue: ICDCS 2023
+   - URL: https://doi.org/10.1109/ICDCS57875.2023.00067
+
+## Open Source Contributions
+- **decentralizepy**: A framework for decentralized machine learning
+  - Repository: https://github.com/sacs-epfl/decentralizepy
+  - Description: Framework simplifying implementation and experimentation with decentralized learning algorithms
+
+## Contact & Professional Profiles
+- **Website**: https://mvujas.com/
+- **GitHub**: https://github.com/mvujas
+- **LinkedIn**: https://www.linkedin.com/in/milosvujasinovic/
+- **Google Scholar**: https://scholar.google.com/citations?user=3h_NxuoAAAAJ
+- **ORCID**: https://orcid.org/0009-0006-5083-3045
+
+## Research Impact
+Milos Vujasinovic's research addresses critical challenges in decentralized machine learning systems, particularly:
+- Privacy preservation in collaborative learning environments
+- Communication efficiency in federated systems
+- Security vulnerabilities in distributed ML systems
+- Practical deployment of privacy-preserving ML at scale
+
+## Site Purpose
+This website serves as a professional portfolio showcasing research publications, open-source contributions, and expertise in decentralized machine learning and privacy-preserving systems. It is designed for academic peers, potential collaborators, and industry professionals interested in cutting-edge ML security and privacy research.
+
+## Last Updated
+2025-01-15
+
+---
+> This file follows the llms.txt convention (https://llmstxt.org/) for AI-readable documentation.

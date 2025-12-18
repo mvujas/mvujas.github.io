@@ -47,6 +47,11 @@
       "givenName": "Milos",
       "familyName": "Vujasinovic",
       "url": "https://mvujas.com/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "0009-0006-5083-3045"
+      },
       "sameAs": [
         "https://github.com/mvujas",
         "https://www.linkedin.com/in/milosvujasinovic/",
@@ -54,24 +59,168 @@
         "https://orcid.org/0009-0006-5083-3045"
       ],
       "jobTitle": "Ph.D. Candidate",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "École Polytechnique Fédérale de Lausanne",
+        "alternateName": "EPFL",
+        "url": "https://www.epfl.ch/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lausanne",
+          "addressCountry": "Switzerland"
+        }
+      },
       "affiliation": {
         "@type": "Organization",
         "name": "École Polytechnique Fédérale de Lausanne (EPFL)",
         "url": "https://www.epfl.ch/"
       },
       "knowsAbout": [
-        "Decentralized Machine Learning",
-        "Privacy-Preserving Machine Learning",
-        "Federated Learning",
-        "Secure Aggregation",
-        "Distributed Systems",
-        "Machine Learning Security",
-        "Cryptography"
+        {
+          "@type": "Thing",
+          "name": "Decentralized Machine Learning",
+          "description": "Research on distributed machine learning systems without centralized coordination"
+        },
+        {
+          "@type": "Thing",
+          "name": "Privacy-Preserving Machine Learning",
+          "description": "Techniques for training ML models while protecting data privacy"
+        },
+        {
+          "@type": "Thing",
+          "name": "Federated Learning",
+          "description": "Collaborative machine learning across decentralized devices"
+        },
+        {
+          "@type": "Thing",
+          "name": "Secure Aggregation",
+          "description": "Cryptographic protocols for privacy-preserving model aggregation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Distributed Systems Security",
+          "description": "Security analysis and defense mechanisms in distributed computing"
+        },
+        {
+          "@type": "Thing",
+          "name": "Machine Learning Security",
+          "description": "Adversarial robustness and security vulnerabilities in ML systems"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cryptography",
+          "description": "Applied cryptography for privacy-preserving computation"
+        },
+        {
+          "@type": "Thing",
+          "name": "Communication Efficiency",
+          "description": "Optimization of communication in distributed learning systems"
+        }
       ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        },
+        {
+          "@type": "Language",
+          "name": "Serbian",
+          "alternateName": "sr"
+        }
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Researcher",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Switzerland"
+        },
+        "skills": [
+          "Machine Learning",
+          "Distributed Systems",
+          "Cryptography",
+          "Privacy Engineering",
+          "Python Programming",
+          "Research Methodology"
+        ]
+      },
       "alumniOf": {
         "@type": "Organization",
         "name": "École Polytechnique Fédérale de Lausanne (EPFL)"
+      },
+      "award": [
+        "EPFL Doctoral Fellowship",
+        "Excellence Fellowship"
+      ],
+      "mainEntityOfPage": {
+        "@type": "ProfilePage",
+        "url": "https://mvujas.com/"
       }
+    }
+    </script>
+
+    <!-- Structured Data for Research Publications -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Research Publications by Milos Vujasinovic",
+      "itemListElement": [
+        {
+          "@type": "ScholarlyArticle",
+          "position": 1,
+          "headline": "Robust ML auditing using prior knowledge",
+          "author": [
+            {"@type": "Person", "name": "J. G. Bourrée"},
+            {"@type": "Person", "name": "A. Godinot"},
+            {"@type": "Person", "name": "S. Biswas"},
+            {"@type": "Person", "name": "A.-M. Kermarrec"},
+            {"@type": "Person", "name": "E. L. Merrer"},
+            {"@type": "Person", "name": "G. Tredan"},
+            {"@type": "Person", "name": "M. de Vos"},
+            {"@type": "Person", "name": "Milos Vujasinovic"}
+          ],
+          "datePublished": "2025",
+          "publisher": {"@type": "Organization", "name": "ICML"},
+          "url": "https://openreview.net/forum?id=AiaVCVDuxF",
+          "about": ["Machine Learning", "Privacy", "Auditing"],
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "position": 2,
+          "headline": "Secure aggregation meets sparsification in decentralized learning",
+          "author": [
+            {"@type": "Person", "name": "S. Biswas"},
+            {"@type": "Person", "name": "A.-M. Kermarrec"},
+            {"@type": "Person", "name": "R. Pires"},
+            {"@type": "Person", "name": "R. Sharma"},
+            {"@type": "Person", "name": "Milos Vujasinovic"}
+          ],
+          "datePublished": "2024",
+          "url": "https://arxiv.org/abs/2405.07708",
+          "about": ["Federated Learning", "Privacy", "Communication Efficiency"],
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "position": 3,
+          "headline": "Decentralized learning made easy with decentralizepy",
+          "author": [
+            {"@type": "Person", "name": "A. Dhasade"},
+            {"@type": "Person", "name": "A.-M. Kermarrec"},
+            {"@type": "Person", "name": "R. Pires"},
+            {"@type": "Person", "name": "R. Sharma"},
+            {"@type": "Person", "name": "Milos Vujasinovic"}
+          ],
+          "datePublished": "2023",
+          "publisher": {"@type": "Organization", "name": "EuroMLSys"},
+          "url": "https://doi.org/10.1145/3578356.3592587",
+          "about": ["Decentralized Learning", "Software Framework", "Distributed Systems"],
+          "inLanguage": "en"
+        }
+      ]
     }
     </script>
 </head>

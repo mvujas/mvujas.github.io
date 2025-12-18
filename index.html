@@ -1,63 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-	<!-- Test -->
 <head>
-
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Portfolio">
-	<meta name="keywords" content="Programmer, Programming, C++, C, Python, HTML, CSS, Javascript, Pascal, Prolog, SQL, Assembly">
-	<meta name="author" content="Milos Vujasinovic">
-
-	<title>Miloš Vujasinović</title>
-
-	<!-- CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-
-	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Milos Vujasinovic - Research and Publications">
+    <meta name="author" content="Milos Vujasinovic">
+    <title>Milos Vujasinovic</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<img src="img/background.jpg" alt="" id="background" style="display: none" />
-	<div class="loader"></div> 
-	
-	<!-- Header -->
-	<header class="header">
-		<div class="text-vertical-center">
-			<h1>Miloš Vujasinović</h1>
-			<!-- <h3>A programming enthusiast and lover of computers</h3> -->
-		</div>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
 
-		<div class="footer">
-			<div class="contact">
-				<!-- <h4>Check out my latest work!</h4> -->
-				<br>
-				<div class="links">
-					<a href="https://github.com/mvujas" target="_blank"><div class="github"></div></a>
-					<!--<div class="questionmark" id="showQuestions"></div>-->
-				</div>
-			</div>
-		</div>
-	</header>
-	
-	<!-- Questions -->
-	<div class="fullscreen">
-		<div class="screencover">
-			<div class="questions">
-				<div class="qtext">
-					<div class="closebutton" id="exitQuestions"></div>
-					<div class="questioncontent" id="questioncontent"></div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-name">Milos Vujasinovic</span>
+            </h1>
+            <p class="hero-subtitle">Ph.D. Candidate @ EPFL | Decentralized ML & Privacy</p>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/script.js"></script>
+    <!-- Social Links Section -->
+    <section class="section social-section" id="connect">
+        <div class="section-content">
+            <h2 class="section-heading" data-scroll>Connect</h2>
+            <div class="social-grid" data-scroll>
+                <a href="https://github.com/mvujas" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Open source projects and code</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/milosvujasinovic/" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Professional network</p>
+                </a>
+
+                <a href="https://scholar.google.com/citations?user=3h_NxuoAAAAJ" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Google Scholar</h3>
+                    <p>Research and citations</p>
+                </a>
+
+                <a href="https://orcid.org/0009-0006-5083-3045" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 256 256" width="32" height="32" fill="currentColor">
+                            <path d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/>
+                            <path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4zM71.8 51.5c0-5.4 4.3-9.8 9.8-9.8 5.4 0 9.8 4.3 9.8 9.8 0 5.4-4.3 9.8-9.8 9.8-5.4 0-9.8-4.3-9.8-9.8z"/>
+                        </svg>
+                    </div>
+                    <h3>ORCID</h3>
+                    <p>Researcher identifier</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section publications-section" id="publications">
+		<div class="section-content">
+			<h2 class="section-heading" data-scroll>Publications</h2>
+
+			<article class="publication-card" data-scroll>
+				<div class="publication-year">2025</div>
+				<div class="publication-content">
+					<h3 class="publication-title">Robust ML auditing using prior knowledge</h3>
+					<p class="publication-authors">J. G. Bourrée, A. Godinot, S. Biswas, A.-M. Kermarrec, E. L. Merrer, G. Tredan, M. de Vos, and <strong>M. Vujasinovic</strong></p>
+					<p class="publication-venue">ICML 2025</p>
+					<div class="publication-links">
+						<a href="https://openreview.net/forum?id=AiaVCVDuxF" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+							Paper
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="publication-card" data-scroll>
+				<div class="publication-year">2025</div>
+				<div class="publication-content">
+					<h3 class="publication-title">Navigating the accuracy-size trade-off with flexible model merging</h3>
+					<p class="publication-authors">A. Dhasade, D. Jhunjhunwala, <strong>M. Vujasinovic</strong>, G. Joshi, and A.-M. Kermarrec</p>
+					<p class="publication-venue">arXiv preprint</p>
+					<div class="publication-links">
+						<a href="https://arxiv.org/abs/2505.23209" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+							arXiv
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="publication-card" data-scroll>
+				<div class="publication-year">2025</div>
+				<div class="publication-content">
+					<h3 class="publication-title">Accelerating MoE model inference with expert sharding</h3>
+					<p class="publication-authors">O. Balmau, A.-M. Kermarrec, R. Pires, A. L. E. Santo, M. de Vos, and <strong>M. Vujasinovic</strong></p>
+					<p class="publication-venue">EuroMLSys 2025</p>
+					<div class="publication-links">
+						<a href="https://doi.org/10.1145/3721146.3721940" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+							Paper
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="publication-card" data-scroll>
+				<div class="publication-year">2024</div>
+				<div class="publication-content">
+					<h3 class="publication-title">Secure aggregation meets sparsification in decentralized learning</h3>
+					<p class="publication-authors">S. Biswas, A.-M. Kermarrec, R. Pires, R. Sharma, and <strong>M. Vujasinovic</strong></p>
+					<p class="publication-venue">arXiv preprint</p>
+					<div class="publication-links">
+						<a href="https://arxiv.org/abs/2405.07708" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+							arXiv
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="publication-card" data-scroll>
+				<div class="publication-year">2023</div>
+				<div class="publication-content">
+					<h3 class="publication-title">Decentralized learning made easy with decentralizepy</h3>
+					<p class="publication-authors">A. Dhasade, A.-M. Kermarrec, R. Pires, R. Sharma, and <strong>M. Vujasinovic</strong></p>
+					<p class="publication-venue">EuroMLSys 2023</p>
+					<div class="publication-links">
+						<a href="https://doi.org/10.1145/3578356.3592587" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+							Paper
+						</a>
+						<a href="https://github.com/sacs-epfl/decentralizepy" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+							Code
+						</a>
+					</div>
+				</div>
+			</article>
+
+			<article class="publication-card" data-scroll>
+				<div class="publication-year">2023</div>
+				<div class="publication-content">
+					<h3 class="publication-title">Get more for less in decentralized learning systems</h3>
+					<p class="publication-authors">A. Dhasade, A.-M. Kermarrec, R. Pires, R. Sharma, <strong>M. Vujasinovic</strong>, and J. Wigger</p>
+					<p class="publication-venue">ICDCS 2023</p>
+					<div class="publication-links">
+						<a href="https://doi.org/10.1109/ICDCS57875.2023.00067" target="_blank" class="pub-link">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+							Paper
+						</a>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Milos Vujasinovic</p>
+            <p class="footer-credit">Designed with <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>

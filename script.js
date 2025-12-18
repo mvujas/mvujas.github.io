@@ -36,16 +36,42 @@ class ParticleSystem {
                 vx: (Math.random() - 0.5) * 0.5,
                 vy: (Math.random() - 0.5) * 0.5,
                 radius: Math.random() * 2.5 + 1.5,
-                opacity: Math.random() * 0.6 + 0.4
+                opacity: Math.random() * 0.6 + 0.4,
+                infected: false,
+                infectedTime: 0,
+                recoveryTime: 3000 + Math.random() * 2000 // 3-5 seconds to recover
             });
+        }
+
+        // Randomly infect 2-3 initial nodes
+        const infectionCount = 2 + Math.floor(Math.random() * 2);
+        for (let i = 0; i < infectionCount; i++) {
+            const randomIndex = Math.floor(Math.random() * this.particles.length);
+            this.particles[randomIndex].infected = true;
+            this.particles[randomIndex].infectedTime = Date.now();
         }
     }
 
     animate() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        const currentTime = Date.now();
 
         // Update and draw particles
         this.particles.forEach((particle, i) => {
+            // Check for recovery
+            if (particle.infected && currentTime - particle.infectedTime > particle.recoveryTime) {
+                particle.infected = false;
+                particle.infectedTime = 0;
+
+                // Small chance to re-infect later to keep the simulation interesting
+                setTimeout(() => {
+                    if (Math.random() < 0.1) { // 10% chance
+                        particle.infected = true;
+                        particle.infectedTime = Date.now();
+                    }
+                }, 5000 + Math.random() * 10000); // Wait 5-15 seconds
+            }
+
             // Move particle
             particle.x += particle.vx;
             particle.y += particle.vy;
@@ -65,6 +91,9 @@ class ParticleSystem {
             if (particle.x < 0 || particle.x > this.canvas.width) particle.vx *= -1;
             if (particle.y < 0 || particle.y > this.canvas.height) particle.vy *= -1;
 
+            // Determine color based on infection status
+            const color = particle.infected ? '227, 0, 0' : '0, 113, 227'; // Red if infected, blue otherwise
+
             // Draw particle with glow effect
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
@@ -74,8 +103,8 @@ class ParticleSystem {
                 particle.x, particle.y, 0,
                 particle.x, particle.y, particle.radius * 3
             );
-            gradient.addColorStop(0, `rgba(0, 113, 227, ${particle.opacity})`);
-            gradient.addColorStop(1, 'rgba(0, 113, 227, 0)');
+            gradient.addColorStop(0, `rgba(${color}, ${particle.opacity})`);
+            gradient.addColorStop(1, `rgba(${color}, 0)`);
 
             this.ctx.fillStyle = gradient;
             this.ctx.fill();
@@ -83,21 +112,39 @@ class ParticleSystem {
             // Draw solid core
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-            this.ctx.fillStyle = `rgba(0, 113, 227, ${particle.opacity})`;
+            this.ctx.fillStyle = `rgba(${color}, ${particle.opacity})`;
             this.ctx.fill();
 
-            // Draw connections
+            // Draw connections and spread infection
             this.particles.slice(i + 1).forEach(otherParticle => {
                 const dx = particle.x - otherParticle.x;
                 const dy = particle.y - otherParticle.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 200) {
+                    // Spread infection through close connections
+                    if (distance < 100) {
+                        if (particle.infected && !otherParticle.infected && Math.random() < 0.002) {
+                            otherParticle.infected = true;
+                            otherParticle.infectedTime = currentTime;
+                        } else if (otherParticle.infected && !particle.infected && Math.random() < 0.002) {
+                            particle.infected = true;
+                            particle.infectedTime = currentTime;
+                        }
+                    }
+
+                    // Draw connection with color based on infection status
                     this.ctx.beginPath();
                     this.ctx.moveTo(particle.x, particle.y);
                     this.ctx.lineTo(otherParticle.x, otherParticle.y);
                     const opacity = 0.3 * (1 - distance / 200);
-                    this.ctx.strokeStyle = `rgba(0, 113, 227, ${opacity})`;
+
+                    // Connection is red if either node is infected
+                    const connectionColor = (particle.infected || otherParticle.infected)
+                        ? `rgba(227, 0, 0, ${opacity})`
+                        : `rgba(0, 113, 227, ${opacity})`;
+
+                    this.ctx.strokeStyle = connectionColor;
                     this.ctx.lineWidth = 1.5;
                     this.ctx.stroke();
                 }

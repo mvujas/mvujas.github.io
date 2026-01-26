@@ -621,7 +621,7 @@ button:focus-visible {
     }
 
     .gradient-overlay {
-        background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.08) 0%, rgba(255, 255, 255, 0.95) 70%);
+        background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.08) 0%, rgba(255, 255, 255, 0.7) 70%);
     }
 
     .hero-name {
@@ -649,5 +649,17 @@ button:focus-visible {
 
     .publications-section {
         background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+    }
+
+    .preprints-section {
+        background: #f5f5f7;
+    }
+
+    .service-section {
+        background: linear-gradient(180deg, #f5f5f7 0%, #ffffff 100%);
+    }
+
+    .publication-year::after {
+        border-color: #f5f5f7;
     }
 }

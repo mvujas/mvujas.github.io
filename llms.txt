@@ -24,18 +24,19 @@ This is the personal research website of Milos Vujasinovic, a Ph.D. candidate at
 
 ## Publications (Chronological)
 
+### 2026
+1. **Navigating the accuracy-size trade-off with flexible model merging**
+   - Authors: A. Dhasade, D. Jhunjhunwala, M. Vujasinovic, G. Joshi, A.-M. Kermarrec
+   - Venue: ICLR 2026
+   - URL: https://openreview.net/forum?id=awyJs71tE7
+
 ### 2025
 1. **Robust ML auditing using prior knowledge**
    - Authors: J. G. Bourrée, A. Godinot, S. Biswas, A.-M. Kermarrec, E. L. Merrer, G. Tredan, M. de Vos, M. Vujasinovic
    - Venue: ICML 2025
    - URL: https://openreview.net/forum?id=AiaVCVDuxF
 
-2. **Navigating the accuracy-size trade-off with flexible model merging**
-   - Authors: A. Dhasade, D. Jhunjhunwala, M. Vujasinovic, G. Joshi, A.-M. Kermarrec
-   - Venue: arXiv preprint
-   - URL: https://arxiv.org/abs/2505.23209
-
-3. **Accelerating MoE model inference with expert sharding**
+2. **Accelerating MoE model inference with expert sharding**
    - Authors: O. Balmau, A.-M. Kermarrec, R. Pires, A. L. E. Santo, M. de Vos, M. Vujasinovic
    - Venue: EuroMLSys 2025
    - URL: https://doi.org/10.1145/3721146.3721940
@@ -81,7 +82,7 @@ Milos Vujasinovic's research addresses critical challenges in decentralized mach
 This website serves as a professional portfolio showcasing research publications, open-source contributions, and expertise in decentralized machine learning and privacy-preserving systems. It is designed for academic peers, potential collaborators, and industry professionals interested in cutting-edge ML security and privacy research.
 
 ## Last Updated
-2025-12-18
+2026-01-26
 
 ---
 > This file follows the llms.txt convention (https://llmstxt.org/) for AI-readable documentation.

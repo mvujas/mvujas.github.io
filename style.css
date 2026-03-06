@@ -472,6 +472,12 @@ body {
     color: var(--color-accent);
 }
 
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* Internet Explorer 10 and 11 */
+  user-select: none;         /* Standard syntax for Chrome, Firefox, and Edge */
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {

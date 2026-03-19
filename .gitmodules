@@ -1,0 +1,3 @@
+[submodule "webmetric_toolkit"]
+	path = webmetric_toolkit
+	url = git@github.com:mvujas/webmetric_toolkit.git
